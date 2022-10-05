@@ -1,15 +1,15 @@
 import clsx from "clsx"
 import { useState } from "react"
 import reactLogo from "./assets/react.svg"
-
-const A = clsx("b")
+import SearchBar from "./components/SearchBar"
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const onSearchAnimal = (_arg: string) => {
+    console.log("🧊 ARG :", _arg)
+  }
   return (
     <div>
-      <button className={clsx("b")}>Button</button>
+      <SearchBar onSubmit={onSearchAnimal} />
     </div>
   )
 }
