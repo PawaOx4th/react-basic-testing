@@ -13,6 +13,7 @@ function SearchBar({ onSubmit }: ISearchBarProps) {
   return (
     <div className={clsx("px-10 py-5")}>
       <form
+        role={"search"}
         onSubmit={(e) => {
           e.preventDefault()
           textInput.current?.value && onSubmit(textInput.current?.value)
